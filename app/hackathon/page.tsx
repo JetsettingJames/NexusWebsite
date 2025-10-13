@@ -36,12 +36,12 @@ export default function HackathonPage() {
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-            Build the future of mobile AI in 24 hours. Join developers, designers, and AI enthusiasts in London for an intensive day of innovation.
+            Build the future of mobile AI in 24 hours. Join developers, designers, and AI enthusiasts in London or participate online from anywhere in the world.
           </p>
 
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <MapPin className="w-5 h-5" />
-            <span className="text-lg font-medium">London, UK</span>
+            <span className="text-lg font-medium">London, UK + Online Globally</span>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-4 px-4 animate-fade-in">
@@ -122,9 +122,9 @@ export default function HackathonPage() {
             </div>
             <h3 className="text-xl font-semibold">Where</h3>
             <p className="text-muted-foreground">
-              London, UK
+              London, UK (Venue TBA)
               <br />
-              Venue TBA
+              Or join online from anywhere
             </p>
           </Card>
 
