@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/Section";
+import { Calendar } from "lucide-react";
 
 export function Hero() {
   return (
@@ -11,7 +12,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,hsl(var(--accent)/0.1),transparent_50%)]" />
       
       <div className="relative text-center space-y-8 max-w-4xl mx-auto">
-        <div className="inline-block mb-4">
+        <div className="flex flex-col sm:flex-row gap-3 items-center justify-center mb-4">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -19,6 +20,10 @@ export function Hero() {
             </span>
             1,500+ active members
           </span>
+          <Link href="/hackathon" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent-foreground text-sm font-medium border border-accent/20 hover:bg-accent/20 transition-colors">
+            <Calendar className="w-4 h-4" />
+            Mobile Hackathon • Nov 27-28
+          </Link>
         </div>
         
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-br from-foreground via-foreground to-foreground/70 px-4">
