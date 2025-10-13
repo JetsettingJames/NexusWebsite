@@ -4,7 +4,8 @@ import { StatBadge } from "@/components/StatBadge";
 export function StatsSection() {
   return (
     <Section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5" />
+      <div className="absolute inset-0 bg-gradient-to-r from-violet-500/5 via-pink-500/5 to-cyan-500/5" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.1),transparent_70%)]" />
       <div className="relative flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 px-4">
         <div className="text-center group w-full md:w-auto">
           <div className="inline-flex flex-col items-center gap-2 px-6 py-5 md:px-8 md:py-6 rounded-2xl bg-background/80 backdrop-blur-sm border-2 border-primary/20 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all w-full md:w-auto">
@@ -20,10 +21,10 @@ export function StatsSection() {
         <div className="text-center group w-full md:w-auto">
           <div className="inline-flex flex-col items-center gap-2 px-6 py-5 md:px-8 md:py-6 rounded-2xl bg-background/80 backdrop-blur-sm border-2 border-accent/20 shadow-lg hover:shadow-xl hover:border-accent/40 transition-all w-full md:w-auto">
             <span className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
-              London • San Francisco
+              London • Boston • San Francisco
             </span>
             <span className="text-xs md:text-sm uppercase tracking-wider text-muted-foreground font-medium">
-              Two vibrant hubs
+              Three vibrant hubs
             </span>
           </div>
         </div>

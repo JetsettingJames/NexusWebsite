@@ -47,9 +47,6 @@ export function Navbar() {
                 </Link>
               ))}
             </div>
-            <Button asChild className="shadow-lg shadow-primary/20">
-              <Link href="/#join">Join</Link>
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -87,11 +84,6 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Button asChild className="w-full">
-            <Link href="/#join" onClick={() => setMobileMenuOpen(false)}>
-              Join
-            </Link>
-          </Button>
         </div>
       </div>
     </nav>

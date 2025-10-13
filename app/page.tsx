@@ -4,7 +4,6 @@ import { EventsPreview } from "@/components/EventsPreview";
 import { CommunitySection } from "@/components/CommunitySection";
 import { StatsSection } from "@/components/StatsSection";
 import { SponsorsSection } from "@/components/SponsorsSection";
-import { JoinSection } from "@/components/JoinSection";
 import type { Event } from "@/components/EventCard";
 
 async function getEvents(): Promise<Event[]> {
@@ -49,7 +48,6 @@ export default async function Home() {
       <StatsSection />
       <CommunitySection />
       <SponsorsSection />
-      <JoinSection />
     </>
   );
 }

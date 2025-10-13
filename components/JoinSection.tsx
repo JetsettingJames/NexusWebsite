@@ -21,8 +21,10 @@ export function JoinSection() {
   };
 
   return (
-    <Section id="join" className="bg-muted/30">
-      <Card className="max-w-2xl mx-auto border-2">
+    <Section id="join" className="relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-background to-violet-500/5" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(6,182,212,0.1),transparent_50%)]" />
+      <Card className="max-w-2xl mx-auto border-2 relative">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl md:text-3xl lg:text-4xl">
             Join the community
