@@ -61,7 +61,7 @@ export async function GET() {
               marginTop: 40,
             }}
           >
-            London • San Francisco
+            London • San Francisco • Boston
           </div>
         </div>
       </div>

@@ -3,7 +3,6 @@ import { LogoCloud } from "@/components/LogoCloud";
 import { EventsPreview } from "@/components/EventsPreview";
 import { CommunitySection } from "@/components/CommunitySection";
 import { StatsSection } from "@/components/StatsSection";
-import { SponsorsSection } from "@/components/SponsorsSection";
 import type { Event } from "@/components/EventCard";
 
 async function getEvents(): Promise<Event[]> {
@@ -47,7 +46,6 @@ export default async function Home() {
       />
       <StatsSection />
       <CommunitySection />
-      <SponsorsSection />
     </>
   );
 }

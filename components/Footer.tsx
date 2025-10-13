@@ -15,7 +15,7 @@ export function Footer() {
               AI Nexus
             </Link>
             <p className="mt-2 text-sm text-muted-foreground">
-              London • San Francisco
+              London • San Francisco • Boston
             </p>
           </div>
 
@@ -50,15 +50,7 @@ export function Footer() {
             </a>
           </div>
 
-          {/* Contact */}
-          <div className="text-center md:text-right">
-            <a
-              href="mailto:hello@ainexus.org"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              hello@ainexus.org
-            </a>
-          </div>
+          <div />
         </div>
 
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">

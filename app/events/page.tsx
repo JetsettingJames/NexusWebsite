@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Events — AI Nexus",
   description:
-    "Upcoming AI Nexus events: curated meetups, demo nights, and hackathons in London and San Francisco.",
+    "Upcoming AI Nexus events: curated meetups, demo nights, and hackathons in London, San Francisco, and Boston.",
 };
 
 async function getEvents(): Promise<Event[]> {
