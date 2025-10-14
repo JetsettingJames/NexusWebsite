@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description:
     "A 1,500+ expert AI community running curated meetups, demo nights, and hackathons across London, San Francisco, and Boston.",
   viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+  icons: {
+    icon: "/logos/nexus-dark.png",
+  },
   openGraph: {
     title: "AI Nexus — London, San Francisco & Boston",
     description:

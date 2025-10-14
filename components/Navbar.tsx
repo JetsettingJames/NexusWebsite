@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -17,6 +19,7 @@ const navLinks = [
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme } = useTheme();
 
   return (
     <nav
@@ -29,10 +32,20 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             aria-label="AI Nexus Home"
           >
-            AI Nexus
+            <div className="relative w-7 h-7">
+              <Image
+                src={theme === "dark" ? "/logos/nexus-dark.png" : "/logos/nexus-white.png"}
+                alt="AI Nexus Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
+              AI Nexus
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
