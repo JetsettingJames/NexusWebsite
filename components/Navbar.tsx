@@ -3,9 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { useTheme } from "next-themes";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
@@ -19,8 +17,6 @@ const navLinks = [
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { resolvedTheme } = useTheme();
-  const isDarkMode = resolvedTheme === "dark";
 
   return (
     <nav
@@ -38,18 +34,23 @@ export function Navbar() {
           >
             <div className="relative w-7 h-7">
               <Image
-                src={isDarkMode ? "/logos/nexus-dark.png" : "/logos/nexus-white.png"}
+                src="/logos/nexus-white.png"
                 alt="AI Nexus Logo"
                 fill
-                className="object-contain"
+                className="object-contain dark:hidden"
+              />
+              <Image
+                src="/logos/nexus-dark.png"
+                alt="AI Nexus Logo"
+                fill
+                className="hidden object-contain dark:block"
               />
             </div>
             <span
               className={cn(
-                "text-xl font-bold tracking-tight",
-                isDarkMode
-                  ? "text-[#1D4999]"
-                  : "bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80"
+                "text-xl font-bold tracking-tight transition-colors",
+                "bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80",
+                "dark:text-[#1D4999] dark:bg-[none]"
               )}
             >
               AI Nexus
