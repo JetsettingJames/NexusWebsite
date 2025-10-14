@@ -36,7 +36,7 @@ export default function HackathonPage() {
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-            The future of personal AI lives on the edge. Build the future of local, private and personal AI with Cactus (YC S25), Nothing Phones, and Hugging Face.
+            The future of personal AI lives on the edge. Build the future of local, private and personal AI with Cactus (YC S25), Nothing Phones, and HuggingFace.
           </p>
 
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
@@ -74,7 +74,7 @@ export default function HackathonPage() {
               <div className="relative h-16 w-40 flex items-center justify-center hover:scale-110 transition-transform duration-300">
                 <Image
                   src="/logos/huggingface.svg"
-                  alt="Hugging Face logo"
+                  alt="HuggingFace logo"
                   fill
                   className="object-contain"
                 />

@@ -16,6 +16,6 @@ The site expects the following logo files:
 - `cactus.png` - Cactus (YC S25)
 - `earlybird.png` - Earlybird VC
 - `nothing.svg` - Nothing
-- `huggingface.svg` - Hugging Face
+- `huggingface.svg` - HuggingFace
 
 If a logo file is missing, the company name will be displayed as text instead.

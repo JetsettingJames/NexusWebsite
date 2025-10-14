@@ -7,7 +7,7 @@ const companies = [
   { name: "Cactus (YC S25)", logo: "/logos/cactus.png" },
   { name: "Earlybird VC", logo: "/logos/earlybird.png" },
   { name: "Nothing", logo: "/logos/nothing.svg" },
-  { name: "Hugging Face", logo: "/logos/huggingface.svg" },
+  { name: "HuggingFace", logo: "/logos/huggingface.svg" },
 ];
 
 export function LogoCloud() {
