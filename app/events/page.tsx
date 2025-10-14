@@ -1,13 +1,45 @@
+import type { Metadata } from "next";
 import { Section } from "@/components/Section";
 import { EventList } from "@/components/EventList";
 import { EventEmbed } from "@/components/EventEmbed";
 import type { Event } from "@/components/EventCard";
-import type { Metadata } from "next";
+import { createOgImageUrl, siteMetadata } from "@/lib/metadata";
+
+const eventsDescription =
+  "Browse upcoming AI Nexus events across London, San Francisco and Boston. RSVP for curated meetups, demo nights and hackathons.";
+
+const eventsOgImage = createOgImageUrl({
+  eyebrow: "AI Nexus Events",
+  title: "Meetups, demo nights & hackathons",
+  description: siteMetadata.locations,
+});
 
 export const metadata: Metadata = {
-  title: "Events — AI Nexus",
-  description:
-    "Upcoming AI Nexus events: curated meetups, demo nights, and hackathons in London, San Francisco, and Boston.",
+  title: "Events",
+  description: eventsDescription,
+  alternates: {
+    canonical: "/events",
+  },
+  openGraph: {
+    type: "website",
+    title: "Events — AI Nexus",
+    description: eventsDescription,
+    url: "/events",
+    images: [
+      {
+        url: eventsOgImage,
+        width: 1200,
+        height: 630,
+        alt: "Upcoming AI Nexus events in London, San Francisco and Boston",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Events — AI Nexus",
+    description: eventsDescription,
+    images: [eventsOgImage],
+  },
 };
 
 async function getEvents(): Promise<Event[]> {

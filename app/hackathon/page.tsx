@@ -1,16 +1,48 @@
+import type { Metadata } from "next";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
-import type { Metadata } from "next";
 import { Calendar, MapPin, Users, Trophy, Clock, Zap } from "lucide-react";
+import { createOgImageUrl } from "@/lib/metadata";
+
+const hackathonDescription =
+  "Build the future of local, private and personal AI with Flutter, React Native and Kotlin developers at the AI Nexus Mobile Agent Hackathon on 28–29 November 2025.";
+
+const hackathonOgImage = createOgImageUrl({
+  eyebrow: "AI Nexus Hackathon",
+  title: "Mobile Agent Hackathon — 28–29 Nov 2025",
+  description: "Build local-first AI with Cactus, Nothing & Hugging Face",
+});
 
 export const metadata: Metadata = {
-  title: "Mobile Agent Hackathon — AI Nexus",
-  description:
-    "Build the future of local, private and personal AI. Join Flutter, React Native and Kotlin developers for the Mobile Agent Hackathon on November 28-29.",
+  title: "Mobile Agent Hackathon",
+  description: hackathonDescription,
+  alternates: {
+    canonical: "/hackathon",
+  },
+  openGraph: {
+    type: "website",
+    title: "Mobile Agent Hackathon — AI Nexus",
+    description: hackathonDescription,
+    url: "/hackathon",
+    images: [
+      {
+        url: hackathonOgImage,
+        width: 1200,
+        height: 630,
+        alt: "Mobile Agent Hackathon presented by AI Nexus",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mobile Agent Hackathon — AI Nexus",
+    description: hackathonDescription,
+    images: [hackathonOgImage],
+  },
 };
 
 export default function HackathonPage() {
