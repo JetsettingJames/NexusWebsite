@@ -2,11 +2,6 @@ import { ImageResponse } from "next/og";
 import { siteMetadata } from "@/lib/metadata";
 
 export const runtime = "edge";
-export const size = {
-  width: 1200,
-  height: 630,
-};
-export const contentType = "image/png";
 
 const fontFamily =
   "Inter, 'Plus Jakarta Sans', 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif";
@@ -136,6 +131,9 @@ export async function GET(req: Request) {
         </div>
       </div>
     ),
-    size
+    {
+      width: 1200,
+      height: 630,
+    }
   );
 }
