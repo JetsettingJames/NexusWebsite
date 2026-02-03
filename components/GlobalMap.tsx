@@ -71,6 +71,7 @@ export function GlobalMap() {
   return (
     <Section className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-teal-500/5 to-cyan-500/5" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.08),transparent_70%)]" />
       <div className="relative">
         <div className="text-center space-y-4 mb-8 md:mb-12 px-4">
           <div className="inline-flex items-center justify-center gap-2 mb-2">
@@ -95,49 +96,58 @@ export function GlobalMap() {
         </div>
 
         <div
-          className="relative w-full mx-auto h-[300px] md:h-[500px]"
+          className="relative w-full mx-auto h-[300px] md:h-[500px] rounded-2xl overflow-hidden"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="hidden md:block h-full">
+          {/* Glow effect container */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-teal-500/10 rounded-2xl pointer-events-none z-10" />
+          
+          <div className="hidden md:block h-full relative">
             <GlobeComponent
               ref={globeRef}
-              globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+              globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
               backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
               pointsData={cities}
               pointLat="lat"
               pointLng="lng"
-              pointColor={() => "#3b82f6"}
-              pointRadius={0.5}
+              pointColor={() => "#60a5fa"}
+              pointRadius={0.8}
               pointLabel={(d: any) => `${d.name}, ${d.country}`}
               pointsMerge={true}
+              pointResolution={2}
+              pointAltitude={0.02}
               arcsData={arcs}
               arcStartLat="startLat"
               arcStartLng="startLng"
               arcEndLat="endLat"
               arcEndLng="endLng"
-              arcColor={() => ["#3b82f6", "#14b8a6"]}
-              arcDashLength={0.4}
-              arcDashGap={0.2}
+              arcColor={() => ["#3b82f6", "#14b8a6", "#8b5cf6"]}
+              arcDashLength={0.5}
+              arcDashGap={0.15}
               arcDashAnimateTime={2000}
-              arcStroke={0.3}
+              arcStroke={0.4}
+              arcCurveResolution={64}
               onGlobeReady={() => setIsLoaded(true)}
               width={undefined}
               height={undefined}
+              backgroundColor="rgba(0,0,0,0)"
             />
           </div>
-          <div className="block md:hidden h-full">
+          <div className="block md:hidden h-full relative">
             <GlobeComponent
               ref={globeRef}
-              globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+              globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
               backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
               pointsData={cities}
               pointLat="lat"
               pointLng="lng"
-              pointColor={() => "#3b82f6"}
-              pointRadius={0.4}
+              pointColor={() => "#60a5fa"}
+              pointRadius={0.6}
               pointLabel={(d: any) => `${d.name}, ${d.country}`}
               pointsMerge={true}
+              pointResolution={2}
+              pointAltitude={0.02}
               arcsData={arcs.slice(0, 6)} // Fewer arcs on mobile for performance
               arcStartLat="startLat"
               arcStartLng="startLng"
@@ -147,10 +157,12 @@ export function GlobalMap() {
               arcDashLength={0.4}
               arcDashGap={0.2}
               arcDashAnimateTime={2000}
-              arcStroke={0.25}
+              arcStroke={0.3}
+              arcCurveResolution={32}
               onGlobeReady={() => setIsLoaded(true)}
               width={undefined}
               height={undefined}
+              backgroundColor="rgba(0,0,0,0)"
             />
           </div>
         </div>
