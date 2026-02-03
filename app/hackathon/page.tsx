@@ -48,8 +48,25 @@ export const metadata: Metadata = {
 export default function HackathonPage() {
   return (
     <>
+      {/* Past Event Banner */}
+      <Section className="bg-muted/50 border-b border-border/50 py-4">
+        <div className="text-center">
+          <Badge variant="outline" className="px-4 py-2 text-sm font-medium bg-muted">
+            <Clock className="w-4 h-4 mr-2" />
+            Past Event
+          </Badge>
+          <p className="text-sm text-muted-foreground mt-2">
+            This event has concluded. Check out our{" "}
+            <Link href="/cactus-deepmind" className="underline hover:text-foreground transition-colors">
+              upcoming hackathon
+            </Link>
+            .
+          </p>
+        </div>
+      </Section>
+
       {/* Hero Section */}
-      <Section className="relative pt-16 pb-12 md:pt-32 md:pb-24 overflow-hidden">
+      <Section className="relative pt-16 pb-12 md:pt-32 md:pb-24 overflow-hidden opacity-75 grayscale-[0.3]">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-background to-pink-500/10" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(249,115,22,0.15),transparent_50%)] animate-pulse" style={{ animationDuration: '8s' }} />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(236,72,153,0.15),transparent_50%)] animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }} />
@@ -57,7 +74,7 @@ export default function HackathonPage() {
         
         <div className="relative text-center space-y-8 max-w-5xl mx-auto">
           <div className="inline-block mb-4 animate-fade-in">
-            <Badge className="px-4 py-2 text-sm font-medium hover:scale-105 transition-transform">
+            <Badge className="px-4 py-2 text-sm font-medium">
               <Calendar className="w-4 h-4 mr-2" />
               November 28-29, 2025
             </Badge>
@@ -77,9 +94,15 @@ export default function HackathonPage() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-4 px-4 animate-fade-in">
-            <Button size="lg" className="group w-full sm:w-auto hover:scale-105 transition-all" asChild>
+            <Button size="lg" variant="outline" className="group w-full sm:w-auto" asChild>
               <Link href="https://luma.com/jrec73nt" target="_blank" rel="noopener noreferrer">
-                Register now
+                View Event Page
+                <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+            </Button>
+            <Button size="lg" className="group w-full sm:w-auto hover:scale-105 transition-all" asChild>
+              <Link href="/cactus-deepmind">
+                See Upcoming Hackathon
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </Button>
@@ -348,15 +371,21 @@ export default function HackathonPage() {
             Join Flutter, React Native, and Kotlin developers in building local, private, and personal AI on the edge.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-4">
-            <Button size="lg" className="group w-full sm:w-auto text-base md:text-lg px-6 md:px-8 hover:scale-105 transition-all" asChild>
+            <Button size="lg" variant="outline" className="group w-full sm:w-auto text-base md:text-lg px-6 md:px-8" asChild>
               <Link href="https://luma.com/jrec73nt" target="_blank" rel="noopener noreferrer">
-                Register on Luma
+                View Event Page
+                <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+            </Button>
+            <Button size="lg" className="group w-full sm:w-auto text-base md:text-lg px-6 md:px-8 hover:scale-105 transition-all" asChild>
+              <Link href="/cactus-deepmind">
+                See Upcoming Hackathon
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </Button>
           </div>
           <p className="text-sm text-muted-foreground">
-            Limited spots available • Registration closes November 20
+            This event has concluded. Join us for our next hackathon!
           </p>
         </div>
       </Section>

@@ -23,9 +23,9 @@ export function Hero() {
             </span>
             1,500+ active members
           </span>
-          <Link href="/hackathon" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white text-sm font-semibold shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 hover:scale-105 transition-all">
+          <Link href="/cactus-deepmind" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-teal-500 text-white text-sm font-semibold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:scale-105 transition-all">
             <Calendar className="w-4 h-4" />
-            Mobile Hackathon • Nov 28-29
+            Global Hackathon • Feb 21
           </Link>
         </div>
         

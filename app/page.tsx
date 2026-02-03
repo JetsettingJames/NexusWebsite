@@ -4,6 +4,7 @@ import { LogoCloud } from "@/components/LogoCloud";
 import { EventsPreview } from "@/components/EventsPreview";
 import { CommunitySection } from "@/components/CommunitySection";
 import { StatsSection } from "@/components/StatsSection";
+import { GlobalMap } from "@/components/GlobalMap";
 import type { Event } from "@/components/EventCard";
 import { createOgImageUrl, siteMetadata } from "@/lib/metadata";
 
@@ -73,6 +74,7 @@ export default async function Home() {
   return (
     <>
       <Hero />
+      <GlobalMap />
       <LogoCloud />
       <EventsPreview
         events={events}

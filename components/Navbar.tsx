@@ -10,7 +10,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Events", href: "/events" },
-  { label: "Hackathon", href: "/hackathon" },
+  { label: "Hackathon", href: "/cactus-deepmind" },
   { label: "Community", href: "/#community" },
   { label: "Sponsors", href: "/#sponsors" },
 ];
